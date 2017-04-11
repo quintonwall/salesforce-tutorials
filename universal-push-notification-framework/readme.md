@@ -1,4 +1,4 @@
-# Sending Rich Push Notifications for iOS 10 with Process Builder and the Salesforce Universal Notification Framework. 
+# Sending Rich Push Notifications for iOS 10 with Process Builder and the Salesforce Universal Notification Framework.
 
 ## Introduction
 [Process Builder](https://trailhead.salesforce.com/modules/business_process_automation/units/process_builder) , Salesforce.com’s App Cloud tool to visually create business processes, is powerful way to automate new or existing processes. ProcessBuilder provides a number of actions to perform typical tasks such as email users, update records, post to Chatter, and more. It also supports the ability to plug in custom functions declared with the [@InvocableMethod](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_annotation_InvocableMethod.htm) annotation.  
@@ -20,14 +20,14 @@ The package installed a global Apex class, `RichMediaPushNotification`, with two
 ## Update Invocable Method to Support Universal Notification Framework
 When you installed the unmanaged package for the Dreamhouse app, an Apex Class, PushPriceChangeNotification was installed. This class defines an invocable method called pushNotification.
 
-```
+```java
  @InvocableMethod(label='Push Price Change Notification')
     public static void pushNotification(List<Id> propertyId)
 ```
 
 Go ahead and delete the body of this method. We are going to rewrite it to use the Universal Notification Framework.  First add, the following lines of code, which are actually mostly  the same as what we deleted. Just like the implementation which comes with the Dreamhouse app, we want to fetch anyone who has favorited our property.
 
-```
+```java
  Id propId = propertyId[0]; // If bulk, only post first to avoid spamming
         System.debug('Price updated on property id '+propId);
         Property__c property = [SELECT Name, Picture__c, Price__c from Property__c WHERE Id=:propId];
@@ -43,7 +43,7 @@ Go ahead and delete the body of this method. We are going to rewrite it to use t
 
 Now, things change for our new implementation.
 
-```
+```java
  Messaging.PushNotification msg = new Messaging.PushNotification();
 
 
@@ -63,13 +63,9 @@ If you need it, the full class is available [here](https://gist.github.com/quint
 ## What Happens Now?
 For our cloud implementation, that’s it. We already have the Process Builder flow which executes on price change, and now, our new and improved invocable method will send the push notification via Apple’s Push notification Service will a fancy new look.
 
-![](Sending%20Rich%20Push%20Notifications%20for%20iOS%2010%20with%20Process%20Builder%20and%20the%20Salesforce%20Universal%20Notification%20Framework./push-compact.png)
+![](https://github.com/quintonwall/salesforce-tutorials/universal-push-notification-framework/push-compact.png?raw=true)
 
 In the second part of this tutorial, we will update our iOS app to register for push notifications from Salesforce, and to handle the property image.
 
 ## Found an Error? Want to Contribute?
 This tutorial is a github repo. If you find an error, or have something to add, please create a pull request.
-
-
-
-#work
