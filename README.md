@@ -1,4 +1,4 @@
-# salesforce-tutorials
+# Salesforce Tutorials
 A Collection of Salesforce platform tutorials, mostly related to using Salesforce as a backend to iOS apps.
 
 ## For Salesforce administrator
