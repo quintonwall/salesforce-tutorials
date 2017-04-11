@@ -58,7 +58,7 @@ Now, things change for our new implementation.
 
 And that’s about it! The code is pretty straight forward. The first thing we need to do is get an instance of the Universal Notification framework, then define the values we want to pass to our RichMediaPushNotificationFramework, which now also includes the URL of the property picture (stored in Picture__c in the Dreamhouse Property object).
 
-If you need it, the full class is available [here](https://gist.github.com/quintonwall/5a49d1a26d4e35dbd625eaeb96717973) .
+If you need it, the full class is available [here](PricePushChangeNotification.apex) .
 
 ## What Happens Now?
 For our cloud implementation, that’s it. We already have the Process Builder flow which executes on price change, and now, our new and improved invocable method will send the push notification via Apple’s Push notification Service will a fancy new look.
@@ -68,4 +68,4 @@ For our cloud implementation, that’s it. We already have the Process Builder f
 In the second part of this tutorial, we will update our iOS app to register for push notifications from Salesforce, and to handle the property image.
 
 ## Found an Error? Want to Contribute?
-This tutorial is a github repo. If you find an error, or have something to add, please create a pull request.
+This tutorial is a github repo. If you find an error, or have something to add, please [create a pull request](https://github.com/quintonwall/salesforce-tutorials/pulls).
