@@ -63,7 +63,7 @@ If you need it, the full class is available [here](PricePushChangeNotification.a
 ## What Happens Now?
 For our cloud implementation, that’s it. We already have the Process Builder flow which executes on price change, and now, our new and improved invocable method will send the push notification via Apple’s Push notification Service will a fancy new look.
 
-![](https://github.com/quintonwall/salesforce-tutorials/universal-push-notification-framework/push-compact.png?raw=true)
+![](https://github.com/quintonwall/salesforce-tutorials/blob/master/universal-push-notification-framework/push-compact.png?raw=true)
 
 In the second part of this tutorial, we will update our iOS app to register for push notifications from Salesforce, and to handle the property image.
 
