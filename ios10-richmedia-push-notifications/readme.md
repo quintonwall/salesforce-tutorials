@@ -30,7 +30,7 @@ Now that you know what the new APS payload looks like, we can get started workin
 
 The Notification Services extension is where you can intercept a push notification and modify it’s contents. For example, you could change the message to include the user’s current location from their phone, or in our example, we need to take the URL  of the property image and convert it to a local file to be displayed. Push notifications messages can only use local resources.
 
-From your Xcode project, select `File —> New Target, and choose Notification Service Extension` from the Application Extension category. Click next, and choose any name you like. I’ve called mine `DreamhouseNotificationService`.
+From your Xcode project, select `File —> New Target`, and choose `Notification Service Extension` from the Application Extension category. Click next, and choose any name you like. I’ve called mine `DreamhouseNotificationService`. Pretty creative aren't I? :)
 
 ![](https://github.com/quintonwall/salesforce-tutorials/blob/master/ios10-richmedia-push-notifications/graphics/notificationservice-target.jpg?raw=true)
 
