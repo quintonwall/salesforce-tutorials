@@ -32,8 +32,7 @@ The Notification Services extension is where you can intercept a push notificati
 
 From your Xcode project, select `File —> New Target, and choose Notification Service Extension` from the Application Extension category. Click next, and choose any name you like. I’ve called mine `DreamhouseNotificationService`.
 
-![](readme/notificationservice-target.png)
-![](https://github.com/quintonwall/salesforce-tutorials/blob/master/ios10-richmedia-push-notifications/graphics/notificationservoce-target.jpg?raw=true)
+![](https://github.com/quintonwall/salesforce-tutorials/blob/master/ios10-richmedia-push-notifications/graphics/notificationservice-target.jpg?raw=true)
 
 
 ## NotificationService class
@@ -79,7 +78,7 @@ If everything goes well, when you send messages, notifications on your app shoul
 
 ![](https://github.com/quintonwall/salesforce-tutorials/blob/master/ios10-richmedia-push-notifications/graphics/push-expanded.png?raw=true)
 
-Once you know your apps is receiving push notifications correctly via APNS testing tools like Boodle, you can try sending the notification from Salesforce using the InvocableMethod we created in the previous tutorial.
+Once you know your apps is receiving push notifications correctly via APNS testing tools like Boodle, you can try sending the notification from Salesforce using the InvocableMethod we created in [the previous tutorial](https://github.com/quintonwall/salesforce-tutorials/tree/master/universal-push-notification-framework).
 
 
 
