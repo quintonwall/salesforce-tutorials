@@ -5,6 +5,7 @@ A Collection of Salesforce platform tutorials, mostly related to using Salesforc
 * [Sending Rich Push Notifications for iOS 10 with Process Builder and the Salesforce Universal Notification Framework.](https://github.com/quintonwall/salesforce-tutorials/tree/master/universal-push-notification-framework)
 
 ## For iOS Developers
+* [Using Mutable Rich Push Notifications for iOS 10.](https://github.com/quintonwall/salesforce-tutorials/tree/master/ios10-richmedia-push-notifications)
 
 ## For World Peace
 Don't hurt animals. Be kind to everyone. Travel. And, if you find an error, or want to contribute, [please create a pull request.](https://github.com/quintonwall/salesforce-tutorials/pulls)
