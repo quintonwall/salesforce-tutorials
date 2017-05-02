@@ -11,7 +11,7 @@ A Collection of Salesforce platform tutorials, mostly related to using Salesforc
 ## For iOS Developers
 * [Using Mutable Rich Push Notifications for iOS 10.](https://github.com/quintonwall/salesforce-tutorials/tree/master/ios10-richmedia-push-notifications)
 
-[Keep Your Code Clean with Custom Frameworks to Encapsulate Salesforce Connectivity.](https://github.com/quintonwall/salesforce-tutorials/tree/master/frameworks-and-salesforce)
+* [Keep Your Code Clean with Custom Frameworks to Encapsulate Salesforce Connectivity.](https://github.com/quintonwall/salesforce-tutorials/tree/master/frameworks-and-salesforce)
 
 ## For World Peace
 Don't hurt animals. Be kind to everyone. Travel. And, if you find an error, or want to contribute, [please create a pull request.](https://github.com/quintonwall/salesforce-tutorials/pulls)
