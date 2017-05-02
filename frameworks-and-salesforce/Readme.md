@@ -74,7 +74,7 @@ Go ahead and run your project. When the view loads, you should see our `Hello Fr
 ## Accessing Salesforce Data & Promises
 Our HelloFramework func was a helpful example to help us understand how to create and use frameworks. It’s time to add some real logic. The DreamhouseAnywhere app retrieves property data from Salesforce via functions in the DreamhouseKit framework.
 
-One of the great things about using a framework in your app design is that this pattern also allows you to abstract away how you connect to Salesforce, specifically whether you use the [Salesforce Mobile SDK(https://developer.salesforce.com/page/Mobile_SDK), or another library like [SwiftySalesforce](https://github.com/mike4aday/SwiftlySalesforce).
+One of the great things about using a framework in your app design is that this pattern also allows you to abstract away how you connect to Salesforce, specifically whether you use the [Salesforce Mobile SDK](https://developer.salesforce.com/page/Mobile_SDK), or another library like [SwiftySalesforce](https://github.com/mike4aday/SwiftlySalesforce).
 
 In this example we are going to use SwiftySalesforce primary because I like to use [Promises](https://github.com/mxcl/PromiseKit) for network calls. Promises provides the ability to perform async calls, greatly improving performance of your app. In our SalesforceData.swift, go ahead and add the following function.
 
