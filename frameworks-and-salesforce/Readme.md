@@ -9,7 +9,7 @@ In years past, I rarely created my own frameworks, as most of my projects genera
 Connectivity to backends, such as Salesforce, is a common example of logic that is frequently called from multiple parts of my application, and something I generally like to abstract connectivity details from the rest of my app. .This tutorial will demonstrate how you can use Frameworks within your app encapsulate Salesforce data access allowing it to be re-used easily across targets.
 
 ## What are we building?
-Generally I don’t start with a framework, but as soon as I see the need I refactor my code. In this example, based on the [DreamhouseAnyway](https://github.com/quintonwall/DreamhouseAnywhere) app, we are going to have both an iPhone app and Apple Watch app. The logic to retrieve property details is common code utilized by both. It’s a great candidate to refactor into a framework.
+Generally I don’t start with a framework, but as soon as I see the need I refactor my code. In this example, based on the [DreamhouseAnywhere](https://github.com/quintonwall/DreamhouseAnywhere) app, we are going to have both an iPhone app and Apple Watch app. The logic to retrieve property details is common code utilized by both. It’s a great candidate to refactor into a framework.
 
 ![](https://github.com/quintonwall/salesforce-tutorials/blob//master/frameworks-and-salesforce/graphics/framework-overview.png?raw=true)
 
@@ -68,14 +68,15 @@ With our framework imported, we can get an instance of our Singleton and call ou
 ```
 
 Go ahead and run your project. When the view loads, you should see our `Hello Framework` message. Cool! You’ve just created your first framework.
+
 ![](https://github.com/quintonwall/salesforce-tutorials/blob/master/frameworks-and-salesforce/graphics/Main_storyboard.png?raw=true)
 
 ## Accessing Salesforce Data & Promises
 Our HelloFramework func was a helpful example to help us understand how to create and use frameworks. It’s time to add some real logic. The DreamhouseAnywhere app retrieves property data from Salesforce via functions in the DreamhouseKit framework.
 
-One of the great things about using a framework in your app design is that this pattern also allows you to abstract away how you connect to Salesforce, specifically whether you use the (Salesforce Mobile SDK)[https://developer.salesforce.com/page/Mobile_SDK], or another library like (SwiftySalesforce)[https://github.com/mike4aday/SwiftlySalesforce].
+One of the great things about using a framework in your app design is that this pattern also allows you to abstract away how you connect to Salesforce, specifically whether you use the [Salesforce Mobile SDK(https://developer.salesforce.com/page/Mobile_SDK), or another library like [SwiftySalesforce](https://github.com/mike4aday/SwiftlySalesforce).
 
-In this example we are going to use SwiftySalesforce primary because I like to use (Promises)[https://github.com/mxcl/PromiseKit] for network calls. Promises provides the ability to perform async calls, greatly improving performance of your app. In our SalesforceData.swift, go ahead and add the following function.
+In this example we are going to use SwiftySalesforce primary because I like to use [Promises](https://github.com/mxcl/PromiseKit) for network calls. Promises provides the ability to perform async calls, greatly improving performance of your app. In our SalesforceData.swift, go ahead and add the following function.
 
 ```swift
 public func getAllProperties() -> Promise<[Property]> {
@@ -148,7 +149,7 @@ public struct Property {
     //favorite
     public var favoriteId: String = ""
 
-    //save dictionary representation as we need to pass that to watchos apps
+    //save dictionary representation as we need to pass that to watchOS apps
     public var asDictionary: [String : Any]?
 
     public init() {}
@@ -236,7 +237,7 @@ func fetchProperties() {
     }
 ```
 
-The first thing you will notice is how clean our code is. This is the great thing about encapsulating your code with framworks. In this example, taken from (PropertiesTableViewController)[https://github.com/quintonwall/DreamhouseAnywhere/blob/master/DreamhouseAnywhere/DreamhouseAnywhere/PropertiesTableViewController.swift] in the DreamhouseAnywhere app, we fetch our data and bind it to a table for display.
+The first thing you will notice is how clean our code is. This is the great thing about encapsulating your code with framworks. In this example, taken from [PropertiesTableViewController](https://github.com/quintonwall/DreamhouseAnywhere/blob/master/DreamhouseAnywhere/DreamhouseAnywhere/PropertiesTableViewController.swift) in the DreamhouseAnywhere app, we fetch our data and bind it to a table for display.
 
 If you check out the `PropertiesTableViewController`, you can see how we utilize the Property object to make data binding super easy.
 
@@ -258,7 +259,7 @@ If you check out the `PropertiesTableViewController`, you can see how we utilize
 
 
 ## Summary
-In this tutorial, we looked at how creating frameworks can greatly enhance the reusability of your code, especially in projects that have multiple targets. In addition, we briefly introduced Promises as a way to call Salesforce, and your framework functions, in an async way for improved app performance.  Some of the code snippets included in the tutorial rely on other parts of your app to be fully configured (setting up SwiftlySalesforce for example). For a complete end-to-end sample, check out the (DreamhouseAnywhere)[https://github.com/quintonwall/DreamhouseAnywhere] app.
+In this tutorial, we looked at how creating frameworks can greatly enhance the reusability of your code, especially in projects that have multiple targets. In addition, we briefly introduced Promises as a way to call Salesforce, and your framework functions, in an async way for improved app performance.  Some of the code snippets included in the tutorial rely on other parts of your app to be fully configured (setting up SwiftlySalesforce for example). For a complete end-to-end sample, check out the [DreamhouseAnywhere](https://github.com/quintonwall/DreamhouseAnywhere) app.
 
 ## Found an Error? Want to Contribute?
 This tutorial is a github repo. If you find an error, or have something to add, please [create a pull request](https://github.com/quintonwall/salesforce-tutorials/pulls).
